@@ -8,8 +8,24 @@ void main() {
           appBar: AppBar(
             title: Text('Home Page'),
           ),
-          body: Center(
-            child: Image.network(url,width: 400,height: 400,fit: BoxFit.cover,)
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:
+            [
+              Image.network(url,width: double.infinity,height: 250,fit: BoxFit.cover,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(Icons.share,color: Colors.green,size: 50,),
+                  Icon(Icons.navigation,color: Colors.amber,size: 50,),
+                  Icon(Icons.favorite,color: Colors.lightBlueAccent,size: 50,),
+                ],
+              ),
+              Text('Irom Man', style: TextStyle(fontSize: 25.0),),
+              Text('loren', style: TextStyle(fontSize: 14),)
+            ],
           ),
         ),
       )
