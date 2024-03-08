@@ -3,10 +3,18 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
       MaterialApp(
-        home: Center(
-          child: Text(
-            'Hello Flutter',
-            textDirection:  TextDirection.ltr,
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text('Home Page'),
+          ),
+          body: Center(
+            child: Text(
+              'Hello Flutter',
+              style: TextStyle(
+                fontSize: 24.0
+              ),
+              textDirection:  TextDirection.ltr,
+            ),
           ),
         ),
       )
